@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text"id='nhap'>
+<button type="button" onclick="kiemtra()">kiểm tra</button>
+<p id="ketqua" >kết quả</p>
+<script>
+    // bài1
+    // let a = parseInt(prompt('nhập số thứ 1'));
+    // let b = parseInt(prompt('nhập số thứ 2'));
+    //  alert( (a+b<4)? 'below': 'over' )
+
+    function kiemtra(){
+    let a= document.getElementById('nhap').value;
+    if(a=='Employee'){
+    document.getElementById('ketqua').innerHTML= "hello";
+    }else if (a=='Director'){
+        document.getElementById('ketqua').innerHTML ="Greetings";
+    }else if (a == ''){
+        document.getElementById('ketqua').innerHTML = "no login";
+    }else {
+        document.getElementById('ketqua').innerHTML = "no problem";
+    }
+    }
+</script>
+</body>
+</html>

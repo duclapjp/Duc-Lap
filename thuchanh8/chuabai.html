@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+function convert() {
+// Bước 1: Lấy dữ liệu
+// Số tiền: amount (số nguyên)
+// Đơn vị cần chuyển: from (số) VND 1, USD 23000
+// Đơn vị cần lấy: to (số) VND 1, USD 23000
+let amount = document.getElementById("amount").value;
+amount = parseInt(amount);
+let from = document.getElementById("from").value;
+from = parseInt(from);
+let to = document.getElementById("to").value;
+to = parseInt(to);
+
+// Bước 2: Tính toán
+// kết quả: result (số nguyên)
+// result = amount*from/to
+let result = amount*from/to;
+
+// Bước 3: Hiển thị kết quả
+// document.g......innerText
+document.getElementById("result").innerText = result;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form>-->
+<label for="amount">Amount</label>
+<input type="text" id="amount"><br>
+<label for="from">From</label>
+<select id="from">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+    <option value="28000">Euro</option>
+</select><br>
+<label for="to">To</label>
+<select id="to">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+    <option value="28000">Euro</option>
+</select><br>
+<button onclick="convert()">Convert</button><br>
+<p id="result"></p>
+
+<!--</form>-->
+
+<script src="js.js"></script>
+</body>
+</html>
+</body>
+</html>
