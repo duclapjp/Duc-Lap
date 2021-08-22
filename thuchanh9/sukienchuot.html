@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="text-align: center">
+    <img  id="anh"  width="100" height="100" src="https://thuviendohoa.vn/upload/images/items/hinh-anh-qua-bong-vang-png-454.webp">
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="sang phải" onclick="moveright()" />
+    <input type="button" value="sang trái" onclick="moveleft()" />
+
+    <script>
+        function init() {
+            a = document.getElementById('anh');
+            a.style.position = 'relative';
+            a.style.left = '0px';
+
+        }
+            function moveright(){
+            a.style.left = parseInt(a.style.left) + 100 + 'px';
+
+            } function moveleft(){
+                a.style.left = parseInt(a.style.left) - 200 + 'px';
+
+            }
+
+        window.onload = init;
+
+    </script>
+</form>
+</body>
+</html>

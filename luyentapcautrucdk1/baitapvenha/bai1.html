@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Tính số tiền điện</h1>
+    <input type="number" id="socu"placeholder="nhập số điện cũ">
+    <input type="number" id="socmoi"placeholder="nhập số điện mới">
+    <button type="button" onclick="tinhtien()">Tính tiền</button>
+</form>
+    <script>
+        function tinhtien(){
+            let num1 = document.getElementById("socu").value;
+            num1=parseInt(num1);
+            let num2 = document.getElementById("socmoi").value;
+            num2=parseInt(num2);
+            let a = num2 - num1;
+            let b;
+            if (a>0 && a<50){
+                b=a*1.678;
+                alert('tiền điện hết'+b+'VNĐ');
+            }else if (a>51 && a<100){
+                b=a*1.734;
+                alert('tiền điện hết'+b+'VNĐ');
+            }else if (a>101 && a<200){
+                b=a*2.014;
+                alert('tiền điện hết'+b+'VNĐ');
+            }else if (a>201 && a<300){
+                b=a*2.536;
+                alert('tiền điện hết'+b+'VNĐ');
+            }else if (a>301 && a<400){
+                b=a*2.834;
+                alert('tiền điện hết'+b+'VNĐ');
+            }else{
+                b=a*2.927;
+                alert('tiền điện hết'+b+'VNĐ');
+            }
+        }
+    </script>
+</body>
+</html>

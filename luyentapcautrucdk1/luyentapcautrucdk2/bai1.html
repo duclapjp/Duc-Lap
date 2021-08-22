@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển độ C sang độ F</title>
+</head>
+<body>
+<h1>Chuyển độ c sang độ F</h1>
+<input type="number" placeholder="nhập độ C muốn đổi" id="doc">
+<button type="button" onclick="doi()">Đổi</button>
+<p id="ketqua">kết quả</p>
+<script>
+    function doi(){
+        let a = document.getElementById('doc').value;
+        a = parseFloat(a);
+        let b;
+        b = a*9/5 +32;
+        document.getElementById('ketqua').innerHTML ='kết quả'+b+ 'Độ F';
+    }
+</script>
+</body>
+</html>

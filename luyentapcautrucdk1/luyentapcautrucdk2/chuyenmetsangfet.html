@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển mét sang feet</h1>
+<input type="number" placeholder="nhập số mét muốn đổi" id="doc">
+<button type="button" onclick="doi()">Đổi</button>
+<p id="ketqua">kết quả</p>
+<script>
+    function doi(){
+        let a = document.getElementById('doc').value;
+        a = parseFloat(a);
+        let b
+        b = a*3.2808;
+        document.getElementById('ketqua').innerHTML ='kết quả'+b+ 'feet';
+    }
+</script>
+</body>
+</html>

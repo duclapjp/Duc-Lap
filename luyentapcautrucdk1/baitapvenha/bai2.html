@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính lương của nhân viên</h1>
+<form>
+    <input type="number" placeholder="số ngày công" id="ngaycong">
+    <select id="bacluong">
+        <option  value="a">A</option>
+        <option  value="b">B</option>
+        <option  value="c">C</option>
+        <option  value="d">D</option>
+    </select>
+<button type="button" onclick="tinhluong()">Tính lương</button>
+</form>
+<script>
+    function tinhluong(){
+        let a = document.getElementById('ngaycong').value;
+        let b = document.getElementById('bacluong').value;
+        a = parseInt(a);
+        // let c;
+        // if (b=="a"){
+        //     c=(5*a)/22;
+        //     alert(c);
+        // }else if (b=="b"){
+        //     c=(6*a)/23;
+        //     alert(c);
+        // }else if(b=="c"){
+        //     c=(8*a)/23;
+        //     alert(c);
+        // }else {
+        //     c=(10*a)/23;
+        //     alert(c);
+        // }
+
+        // cách 2
+        switch (b){
+            case 'a':
+                c=(5*a)/22;
+                alert(c);
+                break;
+            case 'b':
+                c=(6*a)/23;
+                alert(c);
+                break;
+            case 'c':
+                c=(8*a)/23;
+                alert(c);
+                break;
+            default:
+                c=(10*a)/23;
+                alert(c);
+                break;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mày có thích tao không?</title>
+</head>
+<body>
+
+<h1>Có thích tao không?</h1>
+<button  onclick="bamnut()">thích lắm ạ</button>
+<button id="khong" style="position: absolute" onmouseover="mouseover()">méo thích</button>
+
+<script>
+
+    function bamnut(){
+       alert('mình thích bạn');
+    }
+
+    function mouseover(){
+        let x =window.innerWidth;
+        let y =window.innerHeight;
+        let button = document.getElementById("khong");
+       button.style.left = Math.round(x * Math.random()) + "px";
+       button.style.top = Math.round(y * Math.random()) +"px";
+    }
+</script>
+</body>
+</html>

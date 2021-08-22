@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bài tập máy tính đơn giản</title>
+</head>
+<body>
+
+<table border="1">
+  <tr>
+    <td colspan="4" id="hienThi"></td>
+  </tr>
+  <tr>
+    <td><button onclick="layGiaTri(this)" value="1">1</button></td>
+    <td><button onclick="layGiaTri(this)" value="2">2</button></td>
+    <td><button onclick="layGiaTri(this)" value="3">3</button></td>
+    <td><button onclick="layGiaTri(this)" value="+">+</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="layGiaTri(this)" value="4">4</button></td>
+    <td><button onclick="layGiaTri(this)" value="5">5</button></td>
+    <td><button onclick="layGiaTri(this)" value="6">6</button></td>
+    <td><button onclick="layGiaTri(this)" value="-">-</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="layGiaTri(this)" value="7">7</button></td>
+    <td><button onclick="layGiaTri(this)" value="8">8</button></td>
+    <td><button onclick="layGiaTri(this)" value="9">9</button></td>
+    <td><button onclick="layGiaTri(this)" value="*">x</button></td>
+  </tr>
+  <tr>
+    <td><button type="reset">C</button></td>
+    <td><button onclick="layGiaTri(this)" value="0">0</button></td>
+    <td><button onclick="tinhToan()">=</button></td>
+    <td><button onclick="layGiaTri(this)" value="/">/</button></td>
+  </tr>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+  function layGiaTri(val){
+    let vaLue = val.getAttribute("value");
+
+    document.getElementById('hienThi').innerHTML  += vaLue;
+  }
+  function tinhToan(){
+    let ketQua = eval(document.getElementById('hienThi'));
+    document.getElementById('hienThi').innerHTML = ketQua;
+  }
+</script>

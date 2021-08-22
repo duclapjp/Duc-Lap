@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tính hiện tích tam giác vuông</h1>
+<input type="number" placeholder="nhập vào cạnh a"id="num1">
+<input type="number"placeholder="nhập vào cạnh b" id="num2">
+<button onclick="tinh()">tính</button>
+<script>
+    function tinh() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        a = parseFloat(a);
+        b = parseFloat(b);
+        let c = (a*b)/2;
+        alert('diện tích tam giác vuông với 2 cạnh kề a và b là'+c);
+    }
+</script>
+</body>
+</html>

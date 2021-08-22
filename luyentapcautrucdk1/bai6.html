@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính hoa hồng doanh số bán hàng</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('nhập vào doanh thu bán được'));
+    if (a>0 && a<=200000){
+        alert('hoa hồng của bạn được hưởng là 3%');
+    }else if (a>200000&&a<=500000){
+        alert('hoa hồng của bạn được hưởng là 5%');
+    }else if(a>500000){
+        alert('hoa hồng của bạn được hưởng là 10%');
+    }else alert('nhập lại doanh thu');
+</script>
+</body>
+</html>

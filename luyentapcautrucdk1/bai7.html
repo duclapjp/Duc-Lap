@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+<h1>Tính cước điện thoại trong 1 tháng</h1>
+<p>Phí thuê bao bắt buộc là 25 nghìn.</p><br>
+<p>600 đồng cho mỗi phút gọi của 50 phút đầu tiên.</p><br>
+<p>400 đồng cho mỗi phút gọi của 150 phút tiếp theo.</p><br>
+<p>200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.</p><br>
+<!--<form>-->
+    <input id="thoigian" type="number"placeholder="nhập vào số phút gọi">
+    <button type="button" onclick="kiemtra()">kiểm tra</button>
+<!--</form>-->
+<p>số tiền phải trả</p>
+    <p id="cuoc"></p>
+</div>
+<script>
+    function kiemtra(){
+        let a = document.getElementById('thoigian').value;
+            a = parseInt(a);
+        let b
+
+        if (a>0 && a<=50){
+            b =(a*600) +25000;
+            document.getElementById('cuoc').innerHTML = b;
+        }else if (a>50&&a<200){
+            b = (50*600) + (a-50)*400 + 25000;
+            document.getElementById('cuoc').innerHTML = b;
+        }else if (a>200){
+            b = (50*600) + (400*150) + (a-200)*200 +25000;
+            document.getElementById('cuoc').innerHTML = b;
+
+        }
+        else alert('vui lòng nhập lại');
+
+    }
+</script>
+</body>
+</html>

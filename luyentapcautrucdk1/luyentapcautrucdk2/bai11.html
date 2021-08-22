@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CHƯƠNG TRÌNH TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+<p>nhập thu nhập cá nhân của bạn</p>
+<input type="number"placeholder="đơn vị triệu" id="thunhap">
+<button onclick="check()">kiểm tra</button>
+<script>
+    function check() {
+        let a = document.getElementById('thunhap').value;
+        let c;
+        if (a < 5) {
+            c = (5*a)/100;
+            alert(c);
+        }else if(a<=5 && a<10){
+            c = (10*a)/100;
+            alert(c);
+        }else  if (10<=a && a<18){
+            c = (15*a)/100;
+            alert(c);
+        }else  if (18<=a && a<32) {
+            c = (20 * a) / 100;
+            alert(c);
+        } else  if (32<=a && a<52) {
+            c = (25 * a) / 100;
+            alert(c);
+        }else  if (52<=a && a<80) {
+            c = (30 * a) / 100;
+            alert(c);
+        }else {
+            c = (35 * a) / 100;
+            alert(c)
+        }
+    }
+
+</script>
+</body>
+</html>
