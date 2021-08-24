@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("Nhập vào số lượng số nguyên tô muốn in ra: "));
+    let count = 0;
+    let N = 2;
+    let i = 0;
+    let a = 0;
+    for(count = 0; count < numbers; count++){
+        document.write("<br>"+N);
+        for(i = 0; i < N; i++){
+            a = N%i;
+            if (a == 0) {
+                N++;
+            }
+        }
+    }
+</script>
+</body>
+</html>

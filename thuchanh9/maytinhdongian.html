@@ -5,28 +5,42 @@
     <title>Title</title>
 </head>
 <body>
-<h1>máy tính đơn giản</h1>
-        <p>kết quả</p>
-        <button type="button" id="num1" onclick="tinh()">1</button>
-        <button type="button" id="num2" onclick="tinh()">2</button>
-        <button type="button" id="num3" onclick="tinh()">3</button>
-        <button type="button" id="cong" onclick="tinh()">+</button><br>
+        <p id="result"></p>
+        <button type="button" value="1" onclick="tinh(this)">1</button>
+        <button type="button" value="2" onclick="tinh(this)">2</button>
+        <button type="button" value="3" onclick="tinh(this)">3</button>
+        <button type="button" value="+" onclick="tinh(this)">+</button><br>
 
-        <button type="button" id="num4" onclick="tinh()">4</button>
-        <button type="button" id="num5" onclick="tinh()">5</button>
-        <button type="button" id="num6" onclick="tinh()">6</button>
-        <button type="button" id="tru" onclick="tinh()">-</button><br>
+        <button type="button" value="4" onclick="tinh(this)">4</button>
+        <button type="button" value="5" onclick="tinh(this)">5</button>
+        <button type="button" value="6" onclick="tinh(this)">6</button>
+        <button type="button" value="-" onclick="tinh(this)">-</button><br>
 
-        <button type="button" id="num7" onclick="tinh()">7</button>
-        <button type="button" id="num8" onclick="tinh()">8</button>
-        <button type="button" id="num9" onclick="tinh()">9</button>
-        <button type="button" id="nhan" onclick="tinh()">x</button><br>
+        <button type="button" value="7" onclick="tinh(this)">7</button>
+        <button type="button" value="8" onclick="tinh(this)">8</button>
+        <button type="button" value="9" onclick="tinh(this)">9</button>
+        <button type="button" value="*" onclick="tinh(this)">x</button><br>
 
-        <button type="button" id="numc" onclick="tinh()">C</button>
-        <button type="button" id="num0" onclick="tinh()">0</button>
-        <button type="button" id="num=" onclick="tinh()">=</button>
-        <button type="button" id="chia" onclick="tinh()">/</button>
+        <button type="reset"  value="c" onclick="xoa()">C</button>
+        <button type="button" value="0" onclick="tinh(this)">0</button>
+        <button type="button" value="=" onclick="tinh1()">=</button>
+        <button type="button" value="/" onclick="tinh(this)">/</button>
 
 </table>
+<script>
+function tinh(e){
+        let num1 = e.getAttribute("value");
+        document.getElementById('result').innerHTML += num1;
+}
+function tinh1(){
+        let ketqua;
+        let input = document.getElementById('result').innerHTML;
+        ketqua=eval(input);
+        document.getElementById('result').innerHTML = ketqua;
+}
+function xoa(){
+        document.getElementById('result').innerHTML = "";
+}
+</script>
 </body>
 </html>
