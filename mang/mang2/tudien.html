@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="value" type="text" placeholder="nhập vào từ cần tìm kiếm">
+<button type="button" onclick="display()">Tìm Kiếm</button>
+</body>
+<script>
+    function display(){
+        let englishs = ["map",'government','way','art','world','computer','people','two','family','history',];
+        let vietnams = ['bản đồ','chính phủ','đường','nghệ thuật','thế giới','máy tính','người','hai','gia đình','lịch sử'];
+       let key =  document.getElementById('value').value;
+       let check = false;
+        for (let i =0; i<englishs.length;i++){
+            if (key===englishs[i]){
+                alert(vietnams[i]);
+                check = true;
+                break;
+            }
+        }
+        if(check==false){
+            alert('không tìm thấy');
+        }
+    }
+</script>
+</html>

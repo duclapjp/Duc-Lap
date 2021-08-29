@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bài 1 thực hành
+    // let mycolors = ["red","green","white","black"];
+    // console.log(mycolors);
+    // console.log(mycolors.toString()); //hàm đưa về kiểu dạng chuỗi.
+    // console.log(mycolors.join());     // hàm join dùng để nối các phần tử với nhau trong mảng thành một chuỗi.
+    // console.log(mycolors.join('+'));
+
+    //bài 2 thực hành
+    // let num = window.prompt();
+    // let str = num.toString();
+    // let result = [str[0]];
+    // for (let x =1 ;x<str.length;x++){
+    //     if ((str[x-1]%2===0)&&(str[x]%2===0)){
+    //         result.push('-', str[x]);
+    //     }else{
+    //         result.push(str[x]);
+    //     }
+    // }
+    // console.log(result.join(''));
+    //
+
+    //chưa ra được đáp án?
+<!--    let numbers = [2,4,6,5,6,7,8,6];-->
+<!--    let str = numbers.toString();-->
+<!--    let result = [str[0]];-->
+<!--    for (let x =1; x<str.length;x++){-->
+<!--        if ((str[x-1]%2===0)&&(str[x]%2===0)){-->
+<!--            result.push('-', str[x]);-->
+<!--        }else {-->
+<!--            result.push(str[x]);-->
+<!--        }-->
+<!--    }-->
+<!--    console.log(result.join(''));-->
+
+
+    //Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+    // Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.
+
+    var str = 'tHE qUICK bROWN fOX';
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var result = [];
+
+    for(var x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase()); //chuyển đổi chuỗi kí tự in hoa thành in thường.
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());  // chuyển đổi kí tự in thường thành in hoa.
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

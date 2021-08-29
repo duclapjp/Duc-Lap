@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center" >
+<button type="button" onclick="choi()">Chơi</button>
+<script>
+function choi(){
+    let number = 9;
+    for (let i = 0; i < 3; i++) {
+        let a = prompt('nhập vào số muốn chọn');
+        a = parseInt(a);
+        if (a<number){
+            alert('số của bạn đang bé hơn');
+        }else if (a>number){
+            alert('số của bạn đang lớn hơn');
+        }else {
+            alert('chúc mừng bạn đã đoán trúng');
+            break;
+        }
+    }
+
+}
+</script>
+</body>
+</html>

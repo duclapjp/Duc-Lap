@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ square of <input type="text" id="input" oninput="calculate()"> is <span id="result1"></span><br>
+<script>
+    function square(number){                 //square là hàm  number là tham số truyền vào để sử dụng
+        let result = number*number;         // phương thức và biểu thức thực hiện của hàm
+        return result;
+    }
+    function calculate(){
+        let value = document.getElementById('input').value;
+        let ketqua = square(value);
+        document.getElementById('result1').innerHTML=ketqua;
+    }
+
+</script>
+</body>
+</html>

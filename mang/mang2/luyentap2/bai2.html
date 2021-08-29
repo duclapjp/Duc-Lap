@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arrays = ['c','s','c','2','6','1'];
+  let first =0;
+  let last = arrays.length-1;
+  while(first<last){
+    let b = arrays[first];
+    arrays[first] = arrays[last];
+    arrays[last] = b;
+    first++;
+    last--;
+  }document.write(arrays);
+</script>
+</body>
+</html>

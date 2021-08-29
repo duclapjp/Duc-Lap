@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hello ae</p>
+<script>
+    let arrays1=[];
+    arrays1.length=10;
+    let arrays2=[];
+    arrays2.length=10;
+    for (let i = 0; i <arrays1.length; i++) {
+        arrays1[i] = prompt('nhập vào 10 số nguyên mảng a ');
+    }document.write('mảng a là:'+arrays1+"<br>");
+    for (let j = 0; j < arrays2.length ; j++) {
+        arrays2[j] = prompt('nhập vào 10 số nguyên mảng b');
+    }document.write('mảng b là:'+arrays2+"<br>");
+    let arrays3 = [];
+    arrays3.length = 30;
+    arrays3=arrays1.concat(arrays2); //Nối mảng arrays1 với mảng arrays2 vào mảng arrays3
+    arrays3.sort();                 // sắp xếp mảng arrays3 theo thứ tự tăng dần
+    document.write('mảng c theo thứ tự tăng dần của mảng a và b là'+arrays3);
+</script>
+</body>
+</html>

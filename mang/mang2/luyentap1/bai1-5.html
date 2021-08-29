@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="nhập vào số nguyên tố cần thêm" id="num">
+<button type="button" onclick="addnum()">Add</button>
+<button type="button" onclick="show()">Hiển thị</button>
+<button type="button" onclick="tinh()">Tính số lớn hơn 10</button>
+<button type="button" onclick="tinh2()">Tìm giá trị lớn nhất và vị trí</button>
+<button type="button" onclick="tinh3()">Tính giá trị trung bình các phần tử trong mảng</button>
+<button type="button" onclick="tinh4()">Đảo ngược các giá trị trong mảng</button>
+<button type="button" onclick="tinh5()">Đếm số nguyên âm</button>
+<p id="result">result</p>
+<p id="result2">result2</p>
+<p id="result3">result3</p>
+<p id="result4">result4</p>
+<p id="result5">result5</p>
+<p id="result6">result6</p>
+<script>
+
+let ketqua = [];
+let x = 0;
+let arrays = [];
+    function addnum(){
+    arrays[x] = parseInt(document.getElementById('num').value); //đưa giá trị cần add vào mảng
+    x++;
+    }
+    function show(){
+       document.getElementById('result').innerHTML= 'Số nguyên tố cần thực hiện phép tính:&nbsp' +arrays;
+    }
+    function tinh(){
+        for(let i=0;i<arrays.length;i++){
+            if (arrays[i]>=10){
+                ketqua.push(arrays[i]); //đưa toàn bộ kết quả vào mảng mới
+            }
+        }document.getElementById('result2').innerHTML= 'Số nguyên tố lớn hơn 10 là&nbsp:' + ketqua;
+    }
+    function tinh2(){
+        let max = arrays[0];
+        let index = 0;
+        for (let j=0;j<arrays.length;j++){
+            if (arrays[j]>max){
+                max = arrays[j];
+                index = j;
+            }
+        }document.getElementById('result3').innerHTML= 'Số lớn nhất là &nbsp:'+ max +'vị trí là&nbsp:'+index;
+    }
+    function tinh3(){
+        let total=0;
+        for(let i=0;i<arrays.length;i++){
+            total+=arrays[i];
+        }document.getElementById('result4').innerHTML='Giá trị trung bình là&nbsp: '+(total/arrays.length);
+    }
+    function tinh4(){
+        let first=0;
+        let last=arrays.length-1;
+        while(first<last){
+            let b = arrays[first];
+            arrays[first]=arrays[last];
+            arrays[last]=b;
+            first++;
+            last--;
+        }document.getElementById('result5').innerHTML='Các phần tử sau khi được đảo ngược là &nbsp:'+arrays;
+    }
+    let ketqua2 = [];
+    function tinh5(){
+        let b = 0;
+        for(let i=0;i<arrays.length;i++){
+            if (arrays[i]<0){
+                ketqua2.push(arrays[i]);
+            }
+        }document.getElementById('result6').innerHTML= 'Các số nguyên âm là&nbsp:'+ketqua2;
+    }
+</script>
+</body>
+</html>
