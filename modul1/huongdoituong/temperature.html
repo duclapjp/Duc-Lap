@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result1">result1</p>
+<p id="result2">result2</p>
+<script>
+    class Temperature {
+        constructor(doc) {
+            this.doc = doc;
+        }
+
+        convertF() {
+            return (this.doc * 1.8) + 32;
+        }
+
+        convertK() {
+            return this.doc + 273.15;
+        }
+
+    }
+
+    let demo = new Temperature(25);
+    let kq = demo.convertF();
+    document.getElementById('result1').innerHTML ='Độ F là :'+ kq;
+    let kq2 = demo.convertK();
+    document.getElementById('result2').innerHTML ="Độ K là :"+ kq2;
+</script>
+</body>
+</html>

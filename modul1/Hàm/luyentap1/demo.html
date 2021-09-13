@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--viết hàm in ra số lượng các số chẵn trong mảng-->
+<!--tên: countEven-->
+<!--danh sách tham số truyền vào : arr-->
+<!--thân hàm: -->
+<!--dữ liệu trả về:-->
+
+<script>
+    let a =[3,4,5,6,7];
+
+    function countEven(arr) {
+        let n = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                n++;
+            }
+        }
+      return n;
+    }
+
+
+
+    function countEven2() {
+        let n = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] % 2 === 0) {
+                n++;
+            }
+        }
+      return n;
+    }
+
+    let result = countEven(a);
+    let result2 = countEven([3,4,5,6,9,8,8,8,8]);
+    document.write(result2);
+</script>
+</body>
+</html>

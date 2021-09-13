@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center" >
+<h1>Bảng Chuyển đổi giữa feet và meters</h1>
+<table style="border-collapse: collapse" border="1">
+    <tr>
+        <th><input type="number" placeholder="đổi từ met sang feet" oninput="meterToFoot(this.value)"></th>
+        <th><input type="number" placeholder="đổi từ feet sang met" oninput="footToMeter(this.value)"></th>
+    </tr>
+    <tr>
+         <td><p id="result1">result1</p></td>
+         <td><p id="result2">result2</p></td>
+    </tr>
+</table>
+</div>
+<script>
+    function meterToFoot(nhietdo){
+        let valum = parseFloat(nhietdo);
+        document.getElementById('result1').innerHTML = valum*3.279 +'Foot'
+        }
+    function footToMeter(nhietdo2){
+        let valum2 = parseFloat(nhietdo2);
+        document.getElementById('result2').innerHTML = valum2*0.305+'meter'
+    }
+
+    // this.value thay cho document.getElementById('id').value
+
+</script>
+</body>
+</html>

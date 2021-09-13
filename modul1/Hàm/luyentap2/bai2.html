@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="nhập vào bán kính đường tròn" oninput="chinhtron(this.value)">
+<input type="number" placeholder="nhập vào bán kính đường tròn" oninput="shinhtron(this.value)">
+<p id="result1">result1</p>
+<p id="result2">result2</p>
+<script>
+    function shinhtron(r){
+        return 3.14* r*r;
+    }
+
+    function chinhtron(r){
+        return 2*3.14*r;
+    }
+    document.getElementById('result1').innerHTML = 'diện tích hình tròn là'
+</script>
+</body>
+</html>

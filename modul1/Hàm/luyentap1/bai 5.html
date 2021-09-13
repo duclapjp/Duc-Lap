@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let arr2 = ['Ursa Minor','Taurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+    function bai5(name) {
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (name === arr1[i]) {
+                return i;
+
+            }
+        }
+        return -1;
+    }
+
+    let name1 = prompt('nhập tên ngôi sao');
+    let result = bai5(name1);
+    if (result!==-1){
+        alert(arr2[result]);
+    }else alert('không tìm thấy');
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Đổi độ F sang độ C</h1>
+<h2>nhập vào độ F muốn chuyển đổi</h2><br>
+<input type="number" id="dof" oninput="tinh(this.value)"><br>
+<p id="result">Kết quả:</p>
+<script>
+    function tinh(valnum){
+         let  valum = parseFloat(valnum);
+           document.getElementById('result').innerHTML ='kết quả:'+ (valum-32)/1.8;
+    }
+
+// <!--<form>-->
+// <!--    <p>-->
+// <!--        <label>Fahrenheit</label>-->
+// <!--        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"-->
+// <!--               oninput="temperatureConverter(this.value)">-->
+// <!--    </p>-->
+// <!--    <p>Celsius: <span id="outputCelsius"></span></p>-->
+// <!--</form>-->
+//
+// <!--<script>-->
+
+<!--    function temperatureConverter(valNum) {-->
+<!--        valNum = parseFloat(valNum);-->
+<!--        document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;-->
+<!--    }-->
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho trước 1 mảng n phần tử-->
+
+<!--Viết hàm cho phép đếm xem có bao nhiêu phần tử a ( a được nhập vào tử bàn phím)-->
+<script>
+    let a =[3,45,6,5,4,7,5]
+    function countArr(arr,number) {
+        let n = 0;
+        for (let i = 0; i < arr.length ; i++) {
+            if (arr[i] === number) {
+                n++
+
+            }
+        }
+            return n;
+        }
+
+    function cout(){
+        let num = parseInt(prompt('nhập vào 1 số'));
+        let ketqua = document.write(countArr(a,num));
+    }
+cout()
+
+</script>
+
+</body>
+</html>

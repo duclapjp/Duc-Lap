@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+:root{
+    --logo-text-font:font-family: 'Roboto', sans-serif;
+    --main-text-font:font-family: 'Roboto', sans-serif;
+    --main-text-font2:font-family: 'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+.container-input{
+    padding-top: 20px;
+}
+
+header{
+    /*background-image: url("image/nen2.jpg");*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.header-top {
+    justify-content: space-between;
+    padding: 12px;
+    text-align: center;
+    color: darkorange;
+}
+.table td{
+    color:black;
+    border: 1px solid black;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="qlspstyle.css">
+</head>
+<body>
+<header>
+<div class="top">
+    <div class="header-top">
+        <div class="container">
+            <div class="container-litter">
+            <h1>Quản Lý Sản Phẩm</h1><br>
+            </div>
+            <div class="container-input">
+            <input type="text" id="name" placeholder="Tên sản phẩm">
+            <input type="text" id="price" placeholder="Gía">
+            <input type="text" id="quantity" placeholder="Số lượng">
+            <input type="text" id="description" placeholder="Mô tả">
+            <button type="button" onclick="creatProduct()">Thêm mới</button>
+            </div>
+            <div class="table">
+                    <table>
+                        <tr>
+                            <div class="table-td">
+                                <td>Tên sản phẩm</td>
+                                <td>Gía thành</td>
+                                <td>Số lượng</td>
+                                <td>Thông tin</td>
+                            </div>
+                         </tr>
+                        <tbody id="qlsp1">
+
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+</header>
+<!---     sản phẩm    ------>
+
+</section>
+
+</body>
+<script src="classqlsp.js"></script>
+<script src="qlsp.js"></script>
+</html>

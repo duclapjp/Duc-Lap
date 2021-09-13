@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Cicle {
+        constructor(r) {
+            this.r = r;
+        }
+
+        getRadius() {
+            return this.r;
+        }
+
+        getArea() {
+            return Math.PI * this.r * this.r;
+        }
+    }
+
+    let cicle = new Cicle(2);
+    let kq = cicle.getArea();
+    let kq1 = cicle.getRadius();
+    document.write('hình tròn bán kính là:' + kq1 + 'diện tích là:' + kq)
+</script>
+</body>
+</html>

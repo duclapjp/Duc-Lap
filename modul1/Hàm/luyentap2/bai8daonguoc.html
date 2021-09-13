@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result">đảo ngược</p>
+<script>
+    let arr = [];
+    let num = prompt('nhập vào 1 mảng')
+    arr = num.split('');                              //đổi từ chuỗi sang mảng
+    document.write('mảng ban đầu là:'+arr);
+
+    function daonguoc(x) {
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+       return x;
+    }
+    let ketqua = daonguoc(arr);
+    document.getElementById('result').innerHTML='sau khi đảo ngược sẽ là ' + ketqua;
+</script>
+</body>
+</html>
